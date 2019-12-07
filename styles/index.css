@@ -1,8 +1,9 @@
 html {
+  font-family: Courier;
 }
 
 body {
-  background-color: grey;
+  background-color: #4CAF50;
   margin: 0;
 }
 
@@ -11,23 +12,26 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  overflow: hidden;
+  height: 50px;
 
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 
-  background-color: #333;
+  background-color: #ffffcc;
+  border-bottom: 1px solid #4d2600;
 }
 
 #header-img {
-  width: 49px;
-  height: 49px;
+  width: 50px;
+  height: 50px;
 }
 
 #title {
-  color: white;
-  font-size: 18px;
+  color: #4d2600;
+  font-size: 25px;
+  position: relative;
+  bottom: 7px;
 }
 
 #nav-bar {
@@ -36,32 +40,133 @@ header {
 }
 
 .nav-link {
-  color: white;
+  color: #6d2600;
   text-decoration: none;
   text-align: center;
   font-size: 16px;
   padding: 14px 16px;
+  font-weight: bold;
 
   border-left: 1px solid #555;
-  border-bottom: 2px #555 solid;
+  /*border-bottom: 2px #555 solid;
+
+  flex:1;*/
+}
+
+nav:last-child {
+  border-right: 1px #555 solid;
 }
 
 .nav-link:hover {
-  background-color: #555;
+  background-color: #4CAF50;
 }
 
 .nav-link:active {
-  background-color:#4CAF50;
+  background-color:#f2f2f2;
 }
 
-main {
+/*main {
   padding-top: 100px;
+  width: 80%;
+}/*/
+
+#video {
+  max-width: 100%;
+
 }
 
 .link-landing {
   padding-top: 50px;
 }
 
-#link3 {
-  padding-top: 500px;
+
+@media (max-width: 500px) {
+  header {
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-start;
+
+    height:auto;
+
+  }
+  #header-img {
+    display: none;
+  }
+  #nav-bar {
+    display: flex;
+    flex-direction: column;
+  }
+  #title {
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px #555 solid;
+
+    position: relative;
+    top: 10px;
+  }
+
+  .nav-link {
+    border-bottom: 1px #555 solid;
+    border-left: 0px;
+  }
+
+  .link-landing {
+    padding-top: 210px;
+  }
+}
+
+main {
+  display: block;
+  margin: auto;
+  text-align: center;
+  width: 90%;
+  background-color: #f2f2f2;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+
+}
+
+#home-div {
+  display: block;
+  margin: auto;
+  width: 85%;
+}
+
+p {
+  font-size: 18px;
+}
+
+#info-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.trees {
+  height: 25vw;
+  width: 25vw;
+  background-color: #ffffaa;
+  max-width: 100%;
+  border: 1px solid black;
+}
+
+.tree-img {
+  max-width: 100%;
+  display: block;
+  text-align: center;
+  height: auto;
+  border-bottom: 1px solid black;
+  shadow: 2px 2px 3px grey;
+}
+
+#maple {
+  height: 30vw;
+}
+
+#pine {
+  height: 30vw;
+}
+
+a {
+  text-decoration: none;
 }
