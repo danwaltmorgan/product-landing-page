@@ -85,10 +85,15 @@ nav:last-child {
     display: flex;
     flex-direction:column;
     justify-content: flex-start;
-
     height:auto;
-
+    z-index: 2;
   }
+  main {
+    position:relative;
+    top: 180px;
+    z-index: 1;
+  }
+
   #header-img {
     display: none;
   }
@@ -110,10 +115,19 @@ nav:last-child {
     border-left: 0px;
   }
 
-  .link-landing {
-    padding-top: 210px;
+  .link-landing::before {
+    display: block;
+    content: " ";
+    margin-top: -285px;
+    padding-top: 285px;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  #info-div {
   }
 }
+
 
 main {
   display: block;
@@ -143,8 +157,8 @@ p {
 }
 
 .trees {
-  height: 25vw;
-  width: 25vw;
+  height: 21vw;
+  width: 20vw;
   background-color: #ffffaa;
   max-width: 100%;
   border: 1px solid black;
@@ -160,13 +174,67 @@ p {
 }
 
 #maple {
-  height: 30vw;
+  height: 25vw;
 }
 
 #pine {
-  height: 30vw;
+  height: 25vw;
 }
 
 a {
-  text-decoration: none;
+  /*text-decoration: none;*/
+}
+
+.section-div {
+  display: block;
+  width: 85%;
+  margin: auto;
+}
+
+#form {
+  text-align: left;
+  position: relative;
+  left: 10vw;
+}
+
+#contact-div {
+    position: relative;
+    bottom: 30px;
+
+}
+
+@media (max-width: 500px) {
+  #info-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .trees {
+    height: 45vh;
+    width: 70vw;
+    align-self: center;
+
+  }
+
+  #maple {
+    height: 55vh;
+  }
+  #pine {
+    height: 55vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #text {
+    width: 40vw;
+  }
+  #video {
+    width: 30vw;
+  }
 }

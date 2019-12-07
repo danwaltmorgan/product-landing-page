@@ -15,21 +15,24 @@
       <nav id="nav-bar">
           <a class ="nav-link" href="#home">Home</a>
           <a class="nav-link" href="#info">Info</a>
-          <a class="nav-link" href="#link3">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
       </nav>
     </header>
     <main>
       <br>
-      <div id="home-div">
+      <div id="home-div" class="section-div">
         <h2 class="link-landing" id="home">Give the gift of life this holiday <br> with a beautiful new tree!</h2>
         <br>
-
+        <div class="container">
         <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/0lY2qrtPZR0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>
+        <div id="text">
         <p>Trees are our most valuable resource and durring this holiday season you can give value to future generations. Our trees are hand selected and nurtured with a caring (and green) hand from seeds into the sapplings they were always supposed to be.</p>
 
         <p>For a limited time, you can get <strong>12 trees for the price of 1!</strong> We care about the earth so much we'll practically ruin our business to help save it!</p>
         <p><strong>Free shipping with the purchase of 100 trees or more.</strong></p>
+      </div>
+      </div>
       </div>
 
       <h2 class="link-landing" id="info">Our Trees</h2>
@@ -55,9 +58,32 @@
       </div>
 
       <br>
-      <h2 class="link-landing" id="link3">Link 3</h2>
+
+      <div class="section-div" id="contact-div">
+        <h2 class="link-landing" id="contact">Contact Us!</h2>
+        <p>Let us know your name, email, and number and we will get in touch with you as soon as we can.</p>
+        <form id="form" action=" https://www.freecodecamp.com/email-submit" method="post">
+          <label for="name">Name</label>
+          <br>
+          <input type="text" name="name" placeholder="Dan Morgan">
+          <br>
+          <label for="email">Email</label>
+          <br>
+          <br>
+          <input id="email" type="email" name="email" placeholder="email@email.com">
+          <br>
+          <br>
+          <label for="tel">Phone Number</label>
+          <br>
+          <input type="tel" name="tel" placeholder="555-555-5555">
+          <br>
+          <br>
+          <input id="submit" type="submit" name="submit" value="Submit">
+        </form>
+      </div>
 
     </main>
+
     <script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 </html>
